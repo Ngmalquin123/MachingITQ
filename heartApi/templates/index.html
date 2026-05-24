@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción Enfermedades del Corazón</title>
+    <!--Implementamos CSS-->
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <!--Contenedor de formulario-->
+    <div class="container">
+        <h2>Predicción Maching Learning - Enfermedades del Corazón</h2>
+        
+        <!--Implementamos el formulario-->
+        <form action="/predict" method="post">
+
+           <input type="number" name="sex" id="sex" placeholder="Sexo (sex) 0=mujer, 1=hombre" required step="any" min="0" max="1">
+           <input type="number" name="cp" id="cp" placeholder="Tipo de dolor de pecho (cp 0-3)" required step="any" min="0" max="3">
+           <input type="number" name="thalach" id="thalach" placeholder="Frecuencia cardiaca máxima (thalach)" required step="any">
+           <input type="number" name="exang" id="exang" placeholder="Angina inducida por ejercicio (exang 0/1)" required step="any" min="0" max="1">
+           <input type="number" name="oldpeak" id="oldpeak" placeholder="Depresión ST (oldpeak)" required step="any">
+           <input type="number" name="slope" id="slope" placeholder="Pendiente del segmento ST (slope 0-2)" required step="any" min="0" max="2">
+           <input type="number" name="ca" id="ca" placeholder="Número de vasos coloreados (ca 0-4)" required step="any" min="0" max="4">
+           <input type="number" name="thal" id="thal" placeholder="Talasemia (thal 0-3)" required step="any" min="0" max="3">
+           <!--implementamos un botón-->
+           <button type="submit">Predecir</button>
+        </form>
+           <!--Implementamos el resultado de la predicción-->
+           {% if resultado != None %}
+           <div class="resultado">
+            <h3>Resultado</h3>
+            <p>
+                Predicción: {{resultado}}
+                <br>
+                Mensaje: {{mensaje}}
+            </p>
+           </div>
+           {% endif %}
+    </div>
+
+</body>
+</html>

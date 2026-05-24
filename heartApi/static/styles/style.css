@@ -1,0 +1,81 @@
+/*
+Tipos de selectores: dentro de css hay 4 tipos de selectores
+selector Universal: aplica estilos a todo el documento
+selector atributo o etiqueta: Aplica estilos a todas las etiquetas que llevan ese nombre
+selector tipo clase: Aplica los estilos al selector que tiene esa clase y se puede aplicar a todas las etiquetas que tienen esa clase.
+selector tipo id: Aplica estilos a la etiqueta que tiene ese id, este tipo de selector
+se le puede usar una sola vez dentro del html
+*/
+
+/*le damos estilos al body*/
+
+body {
+    /*Tipo de letra*/
+    font-family: Arial;
+    background: #f4f4f4;
+    /*color de fondo del body*/
+    padding: 40px;
+    /*Margenes internos del contenedor body*/
+}
+
+/*Voy a darle estilos a un contenedor con clase container */
+.container {
+    /* le damos una anchura al contenedor*/
+
+    width: 450px;
+    /* Colocamos el formulario en la mitad de la pantalla*/
+    margin: auto;
+    /*Le damos un color solo al contenedor */
+    background: white;
+    /*margenes internos*/
+    padding: 30px;
+    /*bordes redondeados*/
+    border-radius: 15px;
+
+
+}
+
+input {
+    /*Le damos una anchura al input, utilizamos medidas relativas: dentro de css
+     existe 2 tipos de medidas, relativas y absolutas
+     Relativas: cambian a conveniencia del tamaño de la pantalla, para esta medida utilizamos el %
+     Absolutas: no cambian, el tamaño de los componentes están siempre fijos y no importa el tamaño de la pantalla*/
+
+    width: 100%;
+    /*le damos bordes internos*/
+    padding: 10px;
+    /*le damos margen superior*/
+    margin-top: 10px;
+    /*caja con borde calculado dentro del ancho*/
+    box-sizing: border-box;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #c0392b;
+    /*color a la letra */
+    color: #f4f4f4;
+    /*quito los bordes*/
+    border:none;
+    /*Cambio el tipo de cursor*/
+    cursor: pointer;
+
+}
+.resultado{
+    margin-top: 20px;
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 5px;
+
+
+
+}
+
+.info{
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
